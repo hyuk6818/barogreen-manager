@@ -1,0 +1,160 @@
+/* ---------------------------------------------------------------------- */
+/* 폰트 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937; /* text-gray-900 */
+}
+
+/* 전체 레이아웃 (AdminDashboard.jsx 최상위 div의 클래스에 해당) */
+.flex { display: flex; }
+.h-screen { height: 100vh; }
+.w-full { width: 100%; }
+.bg-gray-50 { background-color: #f9fafb; }
+.font-sans { font-family: 'Inter', sans-serif; }
+.text-gray-900 { color: #1f2937; }
+
+/* ---------------------------------------------------------------------- */
+/* 사이드바 스타일 (Sidebar 컴포넌트) */
+/* w-64, flex-shrink-0, bg-gray-800, text-white, shadow-2xl */
+.w-64 { width: 16rem; }
+.flex-shrink-0 { flex-shrink: 0; }
+.hidden { display: none; }
+/* 모바일에서 숨기고 데스크톱(md)에서 보이게 하려면 미디어 쿼리 필요 */
+@media (min-width: 768px) {
+    .md\:block { display: block; }
+}
+
+.bg-gray-800 { background-color: #1f2937; }
+.text-white { color: #ffffff; }
+.h-full { height: 100%; }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+.p-4 { padding: 1rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.text-green-400 { color: #4ade80; }
+.border-b { border-bottom-width: 1px; }
+.border-green-600 { border-color: #16a34a; }
+.pb-4 { padding-bottom: 1rem; }
+
+/* 사이드바 아이템 */
+.rounded-xl { border-radius: 0.75rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.text-left { text-align: left; }
+.block { display: block; }
+.transition-all { transition-property: all; }
+.duration-300 { transition-duration: 300ms; }
+.flex.items-center.space-x-3 { align-items: center; gap: 0.75rem; }
+.text-xl { font-size: 1.25rem; }
+.hover\:bg-gray-700:hover { background-color: #374151; }
+.hover\:text-white:hover { color: #ffffff; }
+.text-gray-300 { color: #d1d5db; }
+/* 활성 상태 */
+.bg-green-600 { background-color: #16a34a; }
+.font-semibold { font-weight: 600; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-green-700\/50 { box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.5), 0 4px 6px -2px rgba(22, 163, 74, 0.25); }
+
+/* ---------------------------------------------------------------------- */
+/* 헤더 스타일 (Header 컴포넌트) */
+.flex-1 { flex: 1 1 0%; }
+.flex-col { flex-direction: column; }
+.overflow-hidden { overflow: hidden; }
+.p-5 { padding: 1.25rem; }
+.border-b { border-bottom-width: 1px; }
+.bg-white { background-color: #ffffff; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.font-extrabold { font-weight: 800; }
+.text-gray-800 { color: #1f2937; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.p-3 { padding: 0.75rem; }
+.border { border-width: 1px; }
+.border-gray-300 { border-color: #d1d5db; }
+.rounded-xl { border-radius: 0.75rem; }
+.focus\:ring-green-500:focus { box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.5); }
+.focus\:border-green-500:focus { border-color: #10b981; }
+.w-64 { width: 16rem; }
+.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+
+/* ---------------------------------------------------------------------- */
+/* 테이블 컨테이너 및 상태 뱃지 (UserTable, PostTable, CommentTable) */
+.p-6 { padding: 1.5rem; }
+.rounded-2xl { border-radius: 1rem; }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+.text-gray-700 { color: #374151; }
+.mb-6 { margin-bottom: 1.5rem; }
+.overflow-x-auto { overflow-x: auto; }
+.min-w-full { min-width: 100%; }
+.divide-y > * + * { border-top-width: 1px; }
+.divide-gray-200 { border-color: #e5e7eb; }
+
+/* 테이블 헤더 */
+.bg-green-50 { background-color: #f0fdf4; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.text-xs { font-size: 0.75rem; }
+.font-semibold { font-weight: 600; }
+.text-green-700 { color: #047857; }
+.uppercase { text-transform: uppercase; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+/* 테이블 바디 */
+.bg-white { background-color: #ffffff; }
+.divide-gray-100 { border-color: #f3f4f6; }
+.hover\:bg-gray-50:hover { background-color: #f9fafb; }
+.transition-colors { transition-property: background-color, border-color, color, fill, stroke; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.whitespace-nowrap { white-space: nowrap; }
+.text-sm { font-size: 0.875rem; }
+.font-medium { font-weight: 500; }
+.text-gray-500 { color: #6b7280; }
+.text-center { text-align: center; }
+
+/* 상태 뱃지 */
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.inline-flex { display: inline-flex; }
+.leading-5 { line-height: 1.25rem; }
+.rounded-full { border-radius: 9999px; }
+
+/* 색상별 뱃지 */
+.bg-green-100 { background-color: #d1fae5; }
+.text-green-800 { color: #065f46; }
+.bg-red-100 { background-color: #fee2e2; }
+.text-red-800 { color: #991b1b; }
+.bg-yellow-100 { background-color: #fef3c7; }
+.text-yellow-800 { color: #92400e; }
+
+/* 액션 버튼 */
+.text-indigo-600 { color: #4f46e5; }
+.hover\:text-indigo-900:hover { color: #3730a3; }
+.text-red-600 { color: #dc2626; }
+.hover\:text-red-900:hover { color: #7f1d1d; }
+.text-green-600 { color: #10b981; }
+.hover\:text-green-900:hover { color: #064e3b; }
+.text-gray-500 { color: #6b7280; }
+.space-x-2 > * + * { margin-left: 0.5rem; }
+
+/* 푸터 */
+.border-t { border-top-width: 1px; }
+.text-center { text-align: center; }
+.text-xs { font-size: 0.75rem; }
+.text-gray-500 { color: #6b7280; }
+.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+.p-4 { padding: 1rem; }
+
+/* ---------------------------------------------------------------------- */
+/* 미디어 쿼리 (반응형 디자인 지원) */
+/* Tailwind의 md:class를 구현합니다. (md: 768px 이상) */
+
+/* 메인 콘텐츠 패딩 */
+@media (min-width: 768px) {
+    .md\:p-8 { padding: 2rem; }
+}
