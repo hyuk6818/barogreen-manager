@@ -7,7 +7,7 @@ import AdminDashboard from './AdminDashboard';
 
 function App() {
   return (
-    // 프로젝트에 스타일이 적용되어 있다면, AdminDashboard의 디자인이 표시됩니다.
+    // 프로젝트에 스타일이 적용되어 있다면, AdminDashboard의 디자인이 표시됩니다..
     <AdminDashboard />
   );
 }
